@@ -1,6 +1,7 @@
 import NameComponent from './components/name-component'
 import instance from './components/name-component-instance';
 import { Person } from './components/typescript-component.ts';
+import * as $ from 'jquery';
 
 class App {
 
@@ -10,11 +11,10 @@ class App {
 
         var el = document.getElementById("yourName");
 
-        // console.log('el',el);
         if (!el) {
             console.log('element not found')
         } else {
-            el.innerText('fullname is ' + person.fullName)
+            el.innerText = 'Your fullname is ' + person.fullName;
         }
     }
     getName() {
@@ -24,6 +24,10 @@ class App {
     }
 }
 
-var app = new App();
-app.getName();
-app.createPerson();
+$(function () {
+//window.onload = () => {
+    const app = new App();
+    app.getName();
+    app.createPerson();
+//}
+});
