@@ -6,7 +6,7 @@ class App {
 
     createPerson() {
         var person = new Person('darren', 'lewis');
-        console.log('fullName = ',person.fullName());
+        console.log('fullName = ',person.fullName);
     }
     getName() {
         var comp = new NameComponent();
@@ -18,3 +18,4 @@ class App {
 
 var app = new App();
 app.getName();
+app.createPerson();
