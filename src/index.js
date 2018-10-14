@@ -6,13 +6,21 @@ class App {
 
     createPerson() {
         var person = new Person('darren', 'lewis');
-        console.log('fullName = ',person.fullName);
+        console.log('person.fullName:',person.fullName);
+
+        var el = document.getElementById("yourName");
+
+        // console.log('el',el);
+        if (!el) {
+            console.log('element not found')
+        } else {
+            el.innerText('fullname is ' + person.fullName)
+        }
     }
     getName() {
         var comp = new NameComponent();
-        var name = comp.displayNameInUppercase("Darren Lewis 2");
-        console.log("name", name);
-        console.log('instance name',instance.displayCtorNameInUppercase());
+        comp.displayNameInUppercase("Darren Lewis 2");
+        instance.displayCtorNameInUppercase();
     }
 }
 

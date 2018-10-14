@@ -6,10 +6,12 @@ export default class NameComponent {
     }
 
     displayCtorNameInUppercase() {
+        console.log('displayCtorNameInUppercase:', this.name);
         return this.name.toUpperCase();
     }
 
     displayNameInUppercase(name) {
+        console.log('displayNameInUppercase:', name);
         return name.toUpperCase();
     }
 }
