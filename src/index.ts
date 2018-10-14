@@ -1,5 +1,5 @@
-import NameComponent from './components/name-component'
-import instance from './components/name-component-instance';
+import NameComponent from './components/name-component.ts'
+import instance from './components/name-component-instance.ts';
 import { Person } from './components/typescript-component.ts';
 import * as $ from 'jquery';
 
@@ -24,10 +24,12 @@ class App {
     }
 }
 
-$(function () {
-//window.onload = () => {
+//$(function () {
+window.onload = () => {
     const app = new App();
     app.getName();
     app.createPerson();
-//}
-});
+
+    console.log('All in on typescript');
+}
+//});

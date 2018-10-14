@@ -1,7 +1,7 @@
 //exporting a class
 export default class NameComponent {
 
-    constructor(name) {
+    constructor(private name: String = null) {
         this.name = name
     }
 
@@ -10,7 +10,7 @@ export default class NameComponent {
         return this.name.toUpperCase();
     }
 
-    displayNameInUppercase(name) {
+    displayNameInUppercase(name: String) {
         console.log('displayNameInUppercase:', name);
         return name.toUpperCase();
     }
